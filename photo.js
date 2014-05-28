@@ -7,7 +7,7 @@ var fs = require('fs')
 var baseurl = "http://home.wind.com.cn:8000/"
     , domain = "windnet"
     , username = "jsun.rick"
-    , password = "Sj1669785"
+    , password = "xxx"
 
 var ntlm = require('ntlm')
     , ntlmrequest = require('request').defaults({
