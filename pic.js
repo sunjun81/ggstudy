@@ -60,7 +60,7 @@ function requestPage(){
     }, function(err, res) {
         ntlmrequest(url, {
             headers: {
-                'Authorization': ntlm.responseHeader(res, url, domain, username, password),
+                'Authorization': ntlm.responseHeader(res, url, domain, username, password)
             }
         }, function (err, res, body) {
             console.log(body);
@@ -135,6 +135,7 @@ function downloadBU(bu) {
             for(var i = 0;i<members.length;i++){
                 var member = members[i];
                 downloadMember(member);
+
             }
         });
     });
