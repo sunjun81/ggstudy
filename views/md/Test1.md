@@ -21,6 +21,24 @@ Or, if you prefer, __use tow underscores instead__.
 1986. What a great season.  
 1986\. What a great season.
 
+[anchor](#link)
+
+This is [an example][foo] reference-style link.
+[foo]: http://example.com/  "Optional Title Here"
+
+I get 10 times more traffic from [Google][] than from
+[Yahoo][] or [MSN][].
+
+  [google]: http://google.com/        "Google"
+  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
+  [msn]:    http://search.msn.com/    "MSN Search"
+
+``There is a literal backtick (`) here.``
+
+A single backtick in a code span: `` ` ``
+
+A backtick-delimited string in a code span: `` `foo` ``
+
 # 中文标题１
 ## 中文标题２
 ### 中文标题３
@@ -77,6 +95,9 @@ FDFS
 [Yahoo][2] or [MSN][3]
 - 3
 >韩立中
+
+### link
+
 [1]: http://google.com/ "Google"
 [2]: http://search.yahoo.com/ "Yahoo Search"
 [3]: http://cn.bing.com/ "MSN"
