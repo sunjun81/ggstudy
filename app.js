@@ -4,15 +4,18 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var fs = require('fs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var md = require('./routes/md');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
 
 app.use(favicon());
 app.use(logger('dev'));
@@ -23,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/md/:title', md);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -52,6 +56,22 @@ app.use(function(err, req, res, next) {
     res.render('error', {
         message: err.message,
         error: {}
+    });
+});
+
+var markdown = require('markdown');
+app.engine('md', function(path, options, fn){
+    fs.readFile(path, 'utf8', function(err, str){
+        if (err) return fn(err);
+        try {
+            var html = markdown.parse(str);
+            html = html.replace(/\{([^}]+)\}/g, function(_, name){
+                return options[name] || '';
+            });
+            fn(null, html);
+        } catch(err) {
+            fn(err);
+        }
     });
 });
 

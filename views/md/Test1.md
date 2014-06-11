@@ -1,6 +1,6 @@
 <link href="../../public/stylesheets/md/markdown.css" rel="stylesheet"></link>
 
-!["wind"](../../public/images/wind.jpg "Wind Corp")
+!["wind"](http://sanshi.me/articles/nodejs_markdownjs/images/prettyPrintOne_ok.gif)
 ====================
 A Second Level Header
 --------------------
@@ -103,7 +103,7 @@ FDFS
 [3]: http://cn.bing.com/ "MSN"
 
 
-!["My Cat"](../../public/images/cat.jpg "Cat")
+!["My Cat"](../../public/images/wind.jpg "Cat")
 
 I strongly recommend against using any `<blink>` tags.
 
