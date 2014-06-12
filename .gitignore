@@ -2,3 +2,4 @@ node_modules
 .idea
 downloads
 views/md/*.html
+bower_components

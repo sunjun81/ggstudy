@@ -103,7 +103,7 @@ FDFS
 [3]: http://cn.bing.com/ "MSN"
 
 
-!["My Cat"](../../public/images/wind.jpg "Cat")
+!["My Cat"](./../../public/images/wind.jpg "Cat")
 
 I strongly recommend against using any `<blink>` tags.
 
