@@ -6,7 +6,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res) {
+router.get('/:title', function(req, res) {
     path = ['./md/',
             req.params.title,
             '.md'
