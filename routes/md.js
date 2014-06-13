@@ -8,7 +8,7 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res) {
     path = ['./md/',
-            'Test1',
+            req.params.title,
             '.md'
             ].join('');
     console.log(path);
