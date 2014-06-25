@@ -45,6 +45,7 @@
     "morgan": "~1.0.0",
     "nodejieba": "^0.1.4",
     "ntlm": "^0.1.1",
+    "phantomjs": "^1.9.7-8",
     "request": "^2.36.0",
     "static-favicon": "~1.0.0"
   },
